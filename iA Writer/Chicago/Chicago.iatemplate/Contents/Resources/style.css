@@ -1,0 +1,637 @@
+/**
+ * iA Writer Template “Chicago Style” - Adapted from Template "Academic"
+ *
+ * font-family: TimesNewRomanPS
+ * font-size:   15px iPhone 5, 16px iPhone 6+, 17px iPad, 17px Mac, 18px
+ * line-height: 1.6667 (30px @ font-size: 18px)
+ * vert margin: 30px @ 1080px wide
+ */
+
+/* From min-width: 80px */
+html {
+  font-family: "Times New Roman", "Keyboard", sans-serif;
+  font-weight: 400; /* Normal */
+  font-size: 16px; /* Equivalent of 12pt. Overridden by responsive font sizing */
+  line-height: 200%; /* Double space */
+}
+
+/* Normal weight for Retina… */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), print {
+  html {
+    font-weight: 400;
+  }
+}
+
+/* …but only until 414px breakpoint on OS X */
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 414px) and (min-device-width: 1152px) , (min-resolution: 192dpi) and (min-width: 414px) and (min-device-width: 1152px) {
+  html {
+    font-weight: 300;
+  }
+}
+
+/* Responsive adjustments */
+
+@media screen and (min-width: 81px) {
+  html {
+    font-size: 1.1px;
+  }
+}
+
+@media screen and (min-width: 82px) {
+  html {
+    font-size: 1.2px;
+  }
+}
+
+@media screen and (min-width: 83px) {
+  html {
+    font-size: 1.3px;
+  }
+}
+
+@media screen and (min-width: 84px) {
+  html {
+    font-size: 1.4px;
+  }
+}
+
+@media screen and (min-width: 85px) {
+  html {
+    font-size: 1.5px;
+  }
+}
+
+@media screen and (min-width: 88px) {
+  html {
+    font-size: 1.7px;
+  }
+}
+
+@media screen and (min-width: 90px) {
+  html {
+    font-size: 1.85px;
+  }
+}
+
+@media screen and (min-width: 92px) {
+  html {
+    font-size: 2px;
+  }
+}
+
+@media screen and (min-width: 97px) {
+  html {
+    font-size: 2.5px;
+  }
+}
+
+@media screen and (min-width: 105px) {
+  html {
+    font-size: 3px;
+  }
+}
+
+@media screen and (min-width: 114px) {
+  html {
+    font-size: 3.5px;
+  }
+}
+
+@media screen and (min-width: 120px) {
+  html {
+    font-size: 4px;
+  }
+}
+
+@media screen and (min-width: 135px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media screen and (min-width: 150px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (min-width: 165px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (min-width: 180px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 180px) and (min-device-width: 1152px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (min-width: 200px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 200px) and (min-device-width: 1152px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 220px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 220px) and (min-device-width: 1152px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 240px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 240px) and (min-device-width: 1152px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 260px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 260px) and (min-device-width: 1152px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 280px) and (min-device-width: 1152px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 300px) and (min-device-width: 1152px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* 15px @320 for iPhone 5 */
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 320px) and (min-device-width: 1152px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* For iPhone 6+ */
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 414px) and (min-device-width: 1152px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 16.5px;
+  }
+}
+
+@media screen and (min-width: 640px) and (min-device-width: 1152px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* For iPad and above */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-width: 1152px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* For widescreen */
+@media screen and (min-width: 1080px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  max-width: 38em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media screen and (min-width: 1080px) {
+  body {
+    max-width: 754px;
+  }
+}
+
+/* Headings */
+
+/*Level 1*/
+h1 {
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 1em;
+}
+
+/*Level 2*/
+h2 {
+	font-size: 16px;
+	text-transform: none;
+	text-align: left;
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+/*Level 3
+Inline header, italic, bold, sentence-style capitalization, terminal period.
+h3 is not set up due to CSS limitation. The following is only for reference purpose only.
+*/
+h3 {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+	text-transform: capitalize;
+	margin-top: 1em;
+}
+
+/* Hypothesis: Level 4 is used for styling hypotheses.*/
+h4 {
+	font-size: 16px;
+	text-align: left !important;
+	font-weight: normal;
+	font-style: italic;
+	padding-left: 0.5in;
+	line-height: 1;
+	margin-top: 1em
+}
+
+
+/* References: Level 5 is used for styling references.
+For styling the output of pandoc-citeproc, take a look at Marked 2*/
+
+h5 {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	text-align: left !important;
+	text-indent: -0.5in !important; /*to start the first line flush to the left, express in negative here whatever distance you placed in the margin-left setting above. */
+	margin-left: 0.5in !important; /*this controls how much to indent the lines in your reference.  */
+	line-height: 1em;
+	margin-top: 2em !important;
+	margin-bottom: 2em !important;
+}
+
+/* Indent Paragraphs */
+p {
+  font-size: 16px;
+  text-indent: 0.5in;
+  margin-top: 0;
+}
+
+/* super, subscripts, and footnote */
+sup,sub,a.footnote {
+    height: 0;
+    line-height: 1;
+    position: relative;
+    vertical-align: super;
+		text-indent: 0;
+}
+
+/* Emphasis */
+strong,
+blockquote em,
+th {
+  font-weight: bold;
+}
+
+/* Ignore paragraph indentation in paragraph lists */
+:-webkit-any(li) > :-webkit-any(p) {
+    text-indent: 0;
+}
+
+/* Indent ordered lists in blockquotes */
+blockquote ul,
+blockquote ol {
+  margin-left: calc((40 / 18) * -1rem); /* -40px when width = 1080px */
+}
+
+/* Blockquotes */
+blockquote {
+	line-height: 1; /*Chicago Style*/
+	text-indent: 0;
+	padding-left: 0.5in;
+	margin-bottom: 2;
+}
+
+blockquote p{
+  text-indent: 0;
+}
+
+blockquote em strong,
+blockquote strong em {
+  font-weight: 700;
+}
+
+/* Page Breaks */
+
+.pagebreak {
+    content: "---Page Break---"
+}
+
+/* Override core.css */
+
+/* Task Lists: Override core.css */
+
+.task-list-item-checkbox {
+  width: 1.6667rem; /* line-height */
+  height: 1.6667rem; /* same as width */
+  background-position: 71% 71%; /* tweak position */
+}
+
+.header p {
+    float: right;
+    margin: auto;
+    padding: 0;
+}
+
+
+}
+
+/* Tables: Override core.css */
+
+table {
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-collapse: collapse;
+	display: table;
+	empty-cells: hide;
+	margin: -1px 0 1em;
+	padding: 0;
+	table-layout: fixed; }
+
+caption {
+	display: table-caption;
+}
+
+col {
+	display: table-column; }
+
+colgroup {
+	display: table-column-group; }
+
+tbody {
+	display: table-row-group; }
+
+tfoot {
+	display: table-footer-group; }
+
+thead {
+	display: table-header-group; }
+
+td, th {
+	display: table-cell; }
+
+tr {
+	display: table-row; }
+
+table th, table td {
+	padding: 0 1em; }
+
+table thead {
+	background: rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+table tbody {
+	background: rgba(0, 0, 0, 0.05); }
+
+table tfoot {
+	background: rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+/* Figures: Override core.css */
+
+figure {
+	display: inline-block;
+	position: relative;
+	margin: 1em 0 1em; }
+
+figcaption {
+	font-style: italic;
+	text-align: center;
+	background: white;
+	color: #666666;
+	position: absolute;
+	left: 0;
+	bottom: -24px;
+	width: 98%;
+	padding: 1%;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out; }
+
+figure:hover > figcaption {
+	/* background: rgba(0,0,0,1) */ }
+
+/* Code */
+
+code,
+samp,
+kbd {
+  font-size: calc((15 / 18) * 1em); /* 0.8333 = 15px @ font-size: 18px */
+}
+
+
+/* @media Rules */
+
+/* Override core.css */
+@media screen and (min-width: 100px) {
+  hr {
+    margin-top: calc((30 / 18) * 1rem);
+    margin-bottom: calc((29 / 18) * 1rem); /* -1px for border-bottom */
+  }
+
+/* Combined horizontal line styles, supplimenting core.css */
+
+/* Adjust border color to imitate sub-pixel lines */
+@media screen and (min-width: 150px) {
+    hr,
+    caption,
+    tbody th,
+    td {
+        border-bottom-color: #888;
+    }
+
+    tbody th,
+    td {
+        border-top-color: #888;
+    }
+}
+
+/* Intended border color from 200px */
+@media screen and (min-width: 200px) {
+    hr,
+    caption,
+    tbody th,
+    td {
+        border-bottom-color: #1a1a1a;
+    }
+
+    tbody th,
+    td {
+        border-top-color: #1a1a1a;
+    }
+}
+
+/* Print styles */
+/* font-size needs to be set here again otherwise responsive typography overrides it */
+@media print {
+  html {
+    font-size: 12pt;
+    text-align: justify;
+    text-justify: inter-word;
+    background: transparent !important; /* Only on html due to checkboxes */
+  }
+
+  body {
+    margin-left: 1in;
+    margin-right: 1in;
+    margin-top: 1in;
+	margin-bottom: 1in;
+  }
+    
+  /* Indent Paragraphs */
+  p {
+    text-indent: 0.5in;
+    margin-top: 0;
+  }
+
+  blockquote {
+  	line-height: 1; /*Chicago Style*/
+  	text-indent: 0;
+  	padding-left: 0.5in;
+  	margin-bottom: 2;
+  }
+  
+  blockquote p{
+    text-indent: 0;
+  }
+    
+    
+  
+}
+
+/** OBJECTS → see core.css base styles for:
+ *  - Indent Paragraphs
+ *  - Footnotes
+ */
+
+adding-left: 1inch;
+}
+
+/* Night Mode */
+
+/* Imitate sub-pixel line for narrow widths */
+
+/* First tweakpoint modifying core.css */
+@media screen and (min-width: 150px) {
+  .night-mode hr,
+  .night-mode caption,
+  .night-mode tbody th,
+  .night-mode td {
+    border-bottom-color: #888;
+  }
+
+  .night-mode tbody th,
+  .night-mode td {
+    border-top-color: #888;
+  }
+}
+
+/* Intended border color from 200px */
+@media screen and (min-width: 200px) {
+  .night-mode hr,
+  .night-mode caption,
+  .night-mode tbody th,
+  .night-mode td {
+    border-bottom-color: #dedede;
+  }
+
+  .night-mode tbody th,
+  .night-mode td {
+    border-top-color: #dedede;
+  }
+}
+
+/* Intended border color from 200px for OS X */
+@media screen and (min-width: 200px) and (min-device-width: 1152px) {
+  .night-mode hr,
+  .night-mode caption,
+  .night-mode tbody th,
+  .night-mode td {
+    border-bottom-color: #cccccc;
+  }
+
+  .night-mode tbody th,
+  .night-mode td {
+    border-top-color: #cccccc;
+  }
+}
+
+
+

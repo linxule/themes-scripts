@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.linxule.chicago</string>
+	<key>CFBundleName</key>
+	<string>Chicago Style</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>IATemplateDocumentFile</key>
+	<string>document</string>
+	<key>IATemplateFooterHeight</key>
+	<integer>80</integer>
+	<key>IATemplateHeaderHeight</key>
+	<integer>65</integer>
+	<key>IATemplateHeaderFile</key>
+	<string>header</string>
+	<key>IATemplateDescription</key>
+	<string>This template aims to apply the requirements specified for Chicago Manual of Style.</string>
+	<key>IATemplateAuthor</key>
+	<string>Xule Lin</string>
+	<key>IATemplateAuthorURL</key>
+	<string>https://linxule.com</string>
+</dict>
+</plist>

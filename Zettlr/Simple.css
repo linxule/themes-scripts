@@ -1,0 +1,31 @@
+:root {
+  --c-primary: #0077C8;
+}
+
+#editor * {
+    font-family: SF Mono, 'JetBrains Mono', 'Inconsolata Regular', monospace;
+    font-size:1.0em;
+}
+
+#editor .cm-header-1,
+#editor .cm-header-2,
+#editor .cm-header-3,
+#editor .cm-header-4,
+#editor .cm-header-5,
+#editor .cm-header-6,
+#editor .cm-formatting-header{
+  color: var(--c-primary);
+  font-family: 'SF Pro Text', sans-serif;
+  font-weight:600;
+  font-size:1.25em;
+}
+
+.CodeMirror-line:not(:last-child)::after {
+  content: "¶";
+  color: #DDD;
+  font-weight:200;
+}
+
+#editor .CodeMirror-code .mute {
+    opacity: .6;
+}

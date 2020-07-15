@@ -1,0 +1,225 @@
+/* interface elements */
+
+:root {
+
+--bg-primary: #FAFAFA;
+--c-primary: #8A9959;
+--editor-textcolor: black;
+}
+
+/********** Scrollbars **********/
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+/* editor */
+
+/* editor background colour*/
+#editor * {
+font-family: 'Cantarell';
+font-size: 12pt;
+}
+
+body #editor .CodeMirror {
+  line-height: 2.0;
+}
+
+body #sidebar-resize {
+  background-color: transparent;
+}
+
+body .cm-zkn-tag {
+	background-color: #709ECC;
+  	color: #FAFAFA;
+  	padding: 3px;
+  	border-radius: 5px;
+}
+
+body .cm-zkn-link {
+  
+  	background-color: #709ECC;
+  	color: #FAFAFA;
+  	padding: 3px;
+  	border-radius: 5px;
+  
+}
+
+body .cm-zkn-id {
+  
+  	background-color: #709ECC;
+  	color: #FAFAFA;
+  	padding: 3px;
+  	border-radius: 5px;
+  
+}
+
+/* headings */
+
+#editor .cm-header-1{
+  	color: #399ee6;
+  	font-size: 15pt
+}
+
+#editor .cm-header-2{
+  font-size: 14pt;
+  color: #399ee6;
+}
+
+#editor .cm-header-3{
+  font-size: 13pt;
+  color: #399ee6;
+}
+
+#editor .cm-header-4{
+  font-size: 12pt;
+  color: #399ee6;
+}
+
+#editor .cm-header-5{
+  font-size: 11pt;
+  color: #399ee6;
+}
+
+
+/*Changes the colour of bold and italics*/
+#editor .CodeMirror .cm-formatting-quote {
+  	background-color: #F27983;
+  	font-weight: bold;
+    padding: 5px;
+  	border-left: 1px solid rgba(222, 84, 86, 1.00);   
+}
+
+
+#editor .CodeMirror .cm-strong {
+  color: #a37acc;
+}
+
+#editor .CodeMirror .cm-em {
+  color: #FF9940;
+}
+
+#editor .CodeMirror .cm-highlight {
+  	background-color: #F27983;
+  	font-weight: bold;
+    	padding: 5px;
+  	border-radius: 5px;    
+}
+
+#editor .CodeMirror .cm-highlight {
+  	background-color: #F27983;
+  	font-weight: bold;
+    	padding: 5px;
+  	border-radius: 5px;    
+}
+
+## 
+  
+}
+
+/* file tree*/
+
+#file-tree {
+	font-family: 'San Francisco', sans-serif;
+	font-size: 8pt;
+}
+
+body #file-tree {
+    background-color: #FFFFFF;
+    color: #575F66;
+    box-shadow: none;
+    border-right: 5px solid #a0a6ac;
+    font-size: 11pt;
+}
+
+body #file-tree div.list-item.selected {
+	color: #FF9940;
+	background-color: transparent;
+	
+}
+
+body #file-tree .list-item.directory p.filename::before {
+  content: '\f094';
+  font-family: 'WebHostingHub-Glyphs';
+  font-size: 0.72em;
+  display: inline-block;
+  
+}
+
+body #file-tree #directories-dirs-header {
+	border-bottom: 1px solid transparent;
+}
+
+body #file-tree div.list-item.selected p.filename::before {
+  content: '\f483';
+  font-family: 'WebHostingHub-Glyphs';
+  font-size: 0.72em;
+  display: inline-block;
+}
+
+/* file list */
+
+#file-list {
+	font-family: 'San Francisco', sans-serif;
+	
+}
+
+body #file-list {
+    background-color: #FFFFFF;
+    color: #575F66;
+    border-right: 1px solid #a0a6ac;
+    font-size: 11pt;
+    box-shadow: none;
+    font-size: 10pt;
+}
+
+body #file-list div.list-item.selected {
+color: #FF9940;
+background-color: transparent;
+border-left: transparent;
+}
+
+body #file-list div.list-item {
+border-bottom: 10px solid transparent;
+border-top: 10px solid transparent;
+border-left: 1px solid transparent;
+line-height: 15px;
+
+}
+
+
+body #file-list div.list-item.file {
+border-left: 20px solid transparent;
+}
+
+body #file-list div.list-item.directory {
+  background-color: transparent;
+  color: #575F66;
+  font-weight: bold;
+}
+
+
+/* toolbar */
+
+body #toolbar{
+	background-color: #FFFFFF;
+	color: #575F66;
+	border-bottom: 1px solid #a0a6ac;
+}
+
+/* document tabs */
+
+/*body #document-tabs {
+
+border-bottom: 1px solid #a0a6ac;
+}*/
+
+body #document-tabs .document {
+  /*border-left: 0.5px solid #a0a6ac;*/
+border-right: 1px solid #a0a6ac;
+}
+
+body #toolbar .searchbar input {
+  border: 1px solid #a0a6ac;
+}
+

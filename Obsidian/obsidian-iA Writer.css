@@ -1,5 +1,6 @@
+/* change font → SF Pro Text*/
 @font-face {
-  font-family: 'Flow Circular';
+  font-family: 'SF Pro Text';
   src: url(public/fonts/edbfed209497891b155c08340fc3e69f.woff);
   font-display: swap;
 }
@@ -1073,7 +1074,7 @@ input.prompt-input {
   padding: 0 10px;
   float: right;
   font-size: 12px;
-  font-family: -apple-system, BlinkMacSystemFont, var(--font-monospace);
+  font-family: SF Pro Text;
 }
 .suggestion-hotkey:not(:last-child) {
   margin-left: 10px;
@@ -3824,7 +3825,7 @@ body {
   margin-right: 6px;
 }
 .setting-hotkey {
-  font-family: -apple-system, BlinkMacSystemFont, var(--font-monospace);
+  font-family: SF Pro Text;
   font-size: 12px;
   background-color: var(--background-secondary-alt);
   border-radius: 4px;
@@ -4410,7 +4411,7 @@ body.is-hovering-clickable * {
   transition: none !important;
 }
 .app-container.is-text-garbled * {
-  font-family: 'Flow Circular', sans-serif !important;
+  font-family: 'SF Pro Text', sans-serif !important;
   line-height: 1.45em !important;
 }
 .external-link {

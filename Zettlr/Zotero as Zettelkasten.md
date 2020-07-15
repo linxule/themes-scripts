@@ -1,0 +1,1 @@
+[https://forum.zettlr.com/discussion/94/zotero-as-zettelkasten](https://forum.zettlr.com/discussion/94/zotero-as-zettelkasten)

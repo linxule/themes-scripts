@@ -150,7 +150,8 @@ function getMetadata(item) {
         var attachmentURIs = [];
         for (let [i,attachment] of item.attachments.entries()) {
             if (attachment.contentType == "application/pdf") {
-                let attString = "[PDF " + (i+1) + "](zotero://open-pdf/library/items/";
+				let attName = attachment.title.replace(".pdf", ""); //get attachment name(created by rules defined in Zotfile), and trim ".pdf"
+                let attString = "[" + attName + "](zotero://open-pdf/library/items/";
                 attString += attachment.uri.substring(attachment.uri.lastIndexOf('/') + 1) + ")";
                 attachmentURIs.push(attString);
             }
@@ -201,9 +202,18 @@ function doExport() {
     while (item = Zotero.nextItem()) {
         //Z.write(ZU.varDump(item));
         var roamItem = {},
-            itemChildren = [];
-        roamItem.title = item.title;
-        var metadata = getMetadata(item); // Get item metadata
+      	itemChildren = [];
+   	 	roamItem.title = item.title;
+		roamItem.pub = item.publicationTitle; 
+		var creatorsS = item.creators[0].lastName;
+				if (item.creators.length>2)
+					creatorsS += " et al.";
+				else if (item.creators.length==2)
+					creatorsS += " &amp; " + item.creators[1].lastName;
+		var titleS = (item.title) ? item.title.replace(/&/g,'&amp;').replace(/"/g,'&quot;') : "(no title)";
+		var date = Zotero.Utilities.strToDate(item.date);
+		dateS = (date.year) ? date.year : item.date;
+		var metadata = getMetadata(item); // Get item metadata
         itemChildren.push(metadata);
         if (Zotero.getOption("exportNotes") && item.notes.length) { // Get notes if requested
             var notes = getNotes(item);
@@ -211,14 +221,19 @@ function doExport() {
         }
         roamItem.children = itemChildren;
         roamItem["edit-time"] = Date.parse(ZU.strToISO(item.dateModified)) / 1000;
-        Zotero.write("# " + roamItem.title + "\n");
-		Zotero.write("### Metadata" + "\n");
-		Zotero.write(metadata.author + "\n");
-		Zotero.write(metadata.date + "\n");
-		Zotero.write("Citekey:: " +item.citekey + "\n");
-		Zotero.write(metadata.pdf + "\n");
-		Zotero.write(metadata.url + "\n");
-		Zotero.write("Tags:: " + metadata.tags + "\n");
+        Zotero.write("# " + creatorsS + "_" + dateS + "_" + titleS +  "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
+		Zotero.write("- ## Metadata" + "\n");
+		Zotero.write("  " + metadata.author + "\n");
+		Zotero.write("  " + "Title::" + roamItem.title + "\n");
+		Zotero.write("  " + metadata.type + "\n");
+		Zotero.write("  " + "Publication::" + roamItem.pub + "\n");
+		Zotero.write("  " + metadata.date + "\n");
+		Zotero.write("  " + "Citekey:: " +item.citekey + "\n");
+		Zotero.write("  " + metadata.pdf + "\n");
+		Zotero.write("  " + metadata.url + "\n");
+		Zotero.write("  " + "Tags:: " + metadata.tags + "\n");
+		Zotero.write("\n" + "## Notes:: " + "\n");
+		Zotero.write("[[" + creatorsS + "_" + dateS + "_" + titleS + "]]" +  "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
     }
 }
 

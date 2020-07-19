@@ -1,3 +1,21 @@
+/* 
+Sample Output
+# Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems
+- ## Metadata
+  - Author(s):: [[Erkko Autio]], [[Satish Nambisan]], [[Llewellyn D. W. Thomas]], [[Mike Wright]]
+  - Title::Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems
+  - Type:: [[Article]]
+  - Publication::Strategic Entrepreneurship Journal
+  - Date:: 2018-03
+  - Citekey:: autio2018
+  - Zotero PDF(s):: [Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial](zotero://open-pdf/library/items/WKYH63Y6)
+  - URL:: [http://doi.wiley.com/10.1002/sej.1266](http://doi.wiley.com/10.1002/sej.1266)
+  - Tags:: #[[ecosystem]], #[[watch]]
+
+- ## Notes:: 
+  - [[Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems]]
+*/
+
 {
     "translatorID": "c04c2288-afbe-4d7b-b419-69e72ac8e9f5",
     "label": "Roam JSON - QuickCopy to MD",
@@ -207,7 +225,7 @@ function doExport() {
 		roamItem.pub = item.publicationTitle; 
 		var creatorsS = item.creators[0].lastName;
 				if (item.creators.length>2)
-					creatorsS += " et al.";
+					creatorsS += " et al";
 				else if (item.creators.length==2)
 					creatorsS += " &amp; " + item.creators[1].lastName;
 		var titleS = (item.title) ? item.title.replace(/&/g,'&amp;').replace(/"/g,'&quot;') : "(no title)";
@@ -221,19 +239,20 @@ function doExport() {
         }
         roamItem.children = itemChildren;
         roamItem["edit-time"] = Date.parse(ZU.strToISO(item.dateModified)) / 1000;
+		zotname = 
         Zotero.write("# " + creatorsS + "_" + dateS + "_" + titleS +  "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
 		Zotero.write("- ## Metadata" + "\n");
-		Zotero.write("  " + metadata.author + "\n");
-		Zotero.write("  " + "Title::" + roamItem.title + "\n");
-		Zotero.write("  " + metadata.type + "\n");
-		Zotero.write("  " + "Publication::" + roamItem.pub + "\n");
-		Zotero.write("  " + metadata.date + "\n");
-		Zotero.write("  " + "Citekey:: " +item.citekey + "\n");
-		Zotero.write("  " + metadata.pdf + "\n");
-		Zotero.write("  " + metadata.url + "\n");
-		Zotero.write("  " + "Tags:: " + metadata.tags + "\n");
-		Zotero.write("\n" + "## Notes:: " + "\n");
-		Zotero.write("[[" + creatorsS + "_" + dateS + "_" + titleS + "]]" +  "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
+		Zotero.write("  - " + metadata.author + "\n");
+		Zotero.write("  - " + "Title::" + roamItem.title + "\n");
+		Zotero.write("  - " + metadata.type + "\n");
+		Zotero.write("  - " + "Publication::" + roamItem.pub + "\n");
+		Zotero.write("  - " + metadata.date + "\n");
+		Zotero.write("  - " + "Citekey:: " +item.citekey + "\n");
+		Zotero.write("  - " + metadata.pdf + "\n");
+		Zotero.write("  - " + metadata.url + "\n");
+		Zotero.write("  - " + "Tags:: " + metadata.tags + "\n");
+		Zotero.write("\n" + "- ## Notes:: " + "\n");
+		Zotero.write("  - [[" + creatorsS + "_" + dateS + "_" + titleS + "]]" +  "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
     }
 }
 

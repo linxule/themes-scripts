@@ -14,6 +14,7 @@ Sample Output
 
 - ## Notes:: 
   - [[Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems]]
+
 */
 
 {
@@ -180,7 +181,7 @@ function getMetadata(item) {
         metadata.url = "URL:: [" + item.url + "](" + item.url + ")";
     }
     if (item.tags[0]) {
-        metadata.tags =  item.tags.map(o => "#[[" + o.tag + "]]").join(", ");
+        metadata.tags =  item.tags.map(o => "#[[" + o.tag + "]]").join(", "); //remove brackets around tags
     }
     if (Object.keys(item.relations).length) {
         metadata.related = "Related:: " + getRelatedItems(item);
@@ -227,8 +228,8 @@ function doExport() {
 				if (item.creators.length>2)
 					creatorsS += " et al";
 				else if (item.creators.length==2)
-					creatorsS += " &amp; " + item.creators[1].lastName;
-		var titleS = (item.title) ? item.title.replace(/&/g,'&amp;').replace(/"/g,'&quot;') : "(no title)";
+					creatorsS += "_" + item.creators[1].lastName;
+		var titleS = (item.title);
 		var date = Zotero.Utilities.strToDate(item.date);
 		dateS = (date.year) ? date.year : item.date;
 		var metadata = getMetadata(item); // Get item metadata
@@ -255,4 +256,3 @@ function doExport() {
 		Zotero.write("  - [[" + creatorsS + "_" + dateS + "_" + titleS + "]]" +  "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
     }
 }
-

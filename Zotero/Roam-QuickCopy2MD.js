@@ -1,19 +1,19 @@
-/* 
-Sample Output
-# Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems
-- ## Metadata
-  - Author(s):: [[Erkko Autio]], [[Satish Nambisan]], [[Llewellyn D. W. Thomas]], [[Mike Wright]]
-  - Title::Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems
-  - Type:: [[Article]]
-  - Publication::Strategic Entrepreneurship Journal
-  - Date:: 2018-03
-  - Citekey:: autio2018
-  - Zotero PDF(s):: [Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial](zotero://open-pdf/library/items/WKYH63Y6)
-  - URL:: [http://doi.wiley.com/10.1002/sej.1266](http://doi.wiley.com/10.1002/sej.1266)
-  - Tags:: #[[ecosystem]], #[[watch]]
+/* Sample output
 
-- ## Notes:: 
-  - [[Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems]]
+> # Yip et al_2018_Trash-talking: Competitive incivility motivates rivalry, performance, and unethical behavior
+> ## Metadata
+> - Author(s):: [[Jeremy A. Yip]], [[Maurice E. Schweitzer]], [[Samir Nurmohamed]]
+> - Title::Trash-talking: Competitive incivility motivates rivalry, performance, and unethical behavior
+> - Type:: [[Article]]
+> - Publication::Organizational Behavior and Human Decision Processes
+> - Date:: 2018-01
+> - Citekey:: yip2018
+> - Zotero PDF(s):: [Yip et al_2018_Trash-talking](zotero://open-pdf/library/items/RZZXYPUW)
+> - URL:: [https://linkinghub.elsevier.com/retrieve/pii/S0749597816301157](https://linkinghub.elsevier.com/retrieve/pii/S0749597816301157)
+> - Tags:: #[[Upenn]]
+>
+> ## Notes
+> - [[Yip et al_2018_Trash-talking: Competitive incivility motivates rivalry, performance, and unethical behavior]]
 
 */
 
@@ -160,7 +160,7 @@ function getMetadata(item) {
     // metadata.children.push({
     //     "string": "Topics:: " + getItemCollections(item)
     // });
- 
+
     metadata.type = "Type:: [[" + getItemType(item) + "]]";
     if (item.date) {
         metadata.date = "Date:: " + ZU.strToISO(item.date);
@@ -223,7 +223,7 @@ function doExport() {
         var roamItem = {},
       	itemChildren = [];
    	 	roamItem.title = item.title;
-		roamItem.pub = item.publicationTitle; 
+		roamItem.pub = item.publicationTitle;
 		var creatorsS = item.creators[0].lastName;
 				if (item.creators.length>2)
 					creatorsS += " et al";
@@ -240,19 +240,20 @@ function doExport() {
         }
         roamItem.children = itemChildren;
         roamItem["edit-time"] = Date.parse(ZU.strToISO(item.dateModified)) / 1000;
-		zotname = 
+		// below is what Zotero "writes" to the clipboard. modify according to personal preferences.
+		pfx = "- "; //set prefix to desired format
         Zotero.write("# " + creatorsS + "_" + dateS + "_" + titleS +  "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
-		Zotero.write("- ## Metadata" + "\n");
-		Zotero.write("  - " + metadata.author + "\n");
-		Zotero.write("  - " + "Title::" + roamItem.title + "\n");
-		Zotero.write("  - " + metadata.type + "\n");
-		Zotero.write("  - " + "Publication::" + roamItem.pub + "\n");
-		Zotero.write("  - " + metadata.date + "\n");
-		Zotero.write("  - " + "Citekey:: " +item.citekey + "\n");
-		Zotero.write("  - " + metadata.pdf + "\n");
-		Zotero.write("  - " + metadata.url + "\n");
-		Zotero.write("  - " + "Tags:: " + metadata.tags + "\n");
-		Zotero.write("\n" + "- ## Notes:: " + "\n");
-		Zotero.write("  - [[" + creatorsS + "_" + dateS + "_" + titleS + "]]" +  "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
+		Zotero.write("## Metadata" + "\n");
+		Zotero.write(pfx + metadata.author + "\n");
+		Zotero.write(pfx + "Title::" + roamItem.title + "\n");
+		Zotero.write(pfx + metadata.type + "\n");
+		Zotero.write(pfx + "Publication::" + roamItem.pub + "\n");
+		Zotero.write(pfx + metadata.date + "\n");
+		Zotero.write(pfx + "Citekey:: " +item.citekey + "\n");
+		Zotero.write(pfx + metadata.pdf + "\n");
+		Zotero.write(pfx + metadata.url + "\n");
+		Zotero.write(pfx + "Tags:: " + metadata.tags + "\n");
+		Zotero.write("\n" + "## Notes" + "\n");
+		Zotero.write(pfx + "[[" + creatorsS + "_" + dateS + "_" + titleS + "]]" +  "\n" + "\n" + "\n"); //header that matches Zotfile names. useful for linking to note exports (e.g., via Highlights app) that follow this naming rule
     }
 }

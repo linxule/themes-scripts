@@ -1,19 +1,21 @@
 /* Sample output
 
-> # Yip et al_2018_Trash-talking: Competitive incivility motivates rivalry, performance, and unethical behavior
-> ## Metadata
-> - Author(s):: [[Jeremy A. Yip]], [[Maurice E. Schweitzer]], [[Samir Nurmohamed]]
-> - Title::Trash-talking: Competitive incivility motivates rivalry, performance, and unethical behavior
-> - Type:: [[Article]]
-> - Publication::Organizational Behavior and Human Decision Processes
-> - Date:: 2018-01
-> - Citekey:: yip2018
-> - Zotero PDF(s):: [Yip et al_2018_Trash-talking](zotero://open-pdf/library/items/RZZXYPUW)
-> - URL:: [https://linkinghub.elsevier.com/retrieve/pii/S0749597816301157](https://linkinghub.elsevier.com/retrieve/pii/S0749597816301157)
-> - Tags:: #[[Upenn]]
->
-> ## Notes
-> - [[Yip et al_2018_Trash-talking: Competitive incivility motivates rivalry, performance, and unethical behavior]]
+# Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems
+## Metadata
+- Author(s):: [[Erkko Autio]], [[Satish Nambisan]], [[Llewellyn D. W. Thomas]], [[Mike Wright]]
+- Title::Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems
+- Type:: [[Article]]
+- Publication::Strategic Entrepreneurship Journal
+- Topics::
+- Date:: 2018-03
+- Date added::
+- Citekey:: autio2018
+- Zotero PDF(s):: [Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial](zotero://open-pdf/library/items/WKYH63Y6)
+- URL:: [http://doi.wiley.com/10.1002/sej.1266](http://doi.wiley.com/10.1002/sej.1266)
+- Tags:: #[[ecosystem]], #[[watch]]
+
+## Notes
+- [[Autio et al_2018_Digital affordances, spatial affordances, and the genesis of entrepreneurial ecosystems]]
 
 */
 
@@ -52,10 +54,6 @@ function cleanHtml(html) {
     return cleanhtml;
 }
 
-function getItemCollections(item) {
-    // TODO: Get collection names to be [[linked]] and build out Roam topic links
-    return item.collections.toString();
-}
 
 function getItemType(item) {
     var zoteroType = item.itemType,
@@ -130,6 +128,7 @@ function getItemType(item) {
     }
     return type;
 }
+
 
 function getAuthors(item) {
     var creators = item.creators,
@@ -248,7 +247,9 @@ function doExport() {
 		Zotero.write(pfx + "Title::" + roamItem.title + "\n");
 		Zotero.write(pfx + metadata.type + "\n");
 		Zotero.write(pfx + "Publication::" + roamItem.pub + "\n");
+		Zotero.write(pfx + "Topics::" + "\n"); //placeholder for collections as topics
 		Zotero.write(pfx + metadata.date + "\n");
+		Zotero.write(pfx + "Date added::" + "\n"); //placeholder
 		Zotero.write(pfx + "Citekey:: " +item.citekey + "\n");
 		Zotero.write(pfx + metadata.pdf + "\n");
 		Zotero.write(pfx + metadata.url + "\n");

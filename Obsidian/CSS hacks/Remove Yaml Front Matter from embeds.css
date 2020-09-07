@@ -1,0 +1,2 @@
+/* Remove embed yaml front matter by Thery */
+.markdown-embed-content > .language-yaml { display: none; }

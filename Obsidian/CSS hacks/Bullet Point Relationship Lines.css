@@ -1,0 +1,21 @@
+/* Bullet Point Relationship Lines by Bernando and cannibalox */
+
+ul ul { position: relative; }
+ul ul::before {
+content:'';
+border-left:  1px solid var(--background-modifier-border);
+position: absolute;
+}
+ul ul::before { left: -0.8em; top: 0; bottom: 0; }
+
+
+/* rule line when there are checkboxes*/
+ul .task-list-item ul::before {left: 0.15em !important}
+
+/* ul line in source mode */
+.cm-hmd-list-indent .cm-tab::before{
+content: ' ';
+border-left:  1px solid var(--background-modifier-border);
+position: absolute;
+height: 100%;
+}

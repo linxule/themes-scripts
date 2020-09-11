@@ -1,0 +1,32 @@
+-[ZotFile - Advanced PDF management for Zotero](http://zotfile.com/#extract-pdf-annotations)
+    -**Extract Annotation Color** (thanks to [RAG2ko](https://github.com/RAG2ko))
+    -Zotfile now extracts the color of annotations. The color can be used in two ways: (a) To format extracted annotations: Just add some css styling to the hidden options for formatting. For example, change `formatAnnotationHighlight` to `<p style="background-color:%(color);">"%(content)" (%(cite))</p>`. The wildcard `%(color)` is replaced by the annotation color (you can also use %(color_category) for the color category—reddish is red etc). This styling has the same effect but looks a little better: `<p><span style="background-color:%(color);">"%(content)"</span> (%(cite))</p>` (b) To create separate notes for color categories: The hidden option `pdfExtraction.colorNotes` allows you to create a separate note for each color category (yellow, red, green etc annotations).
+    -**Improved formatting of extracted annotations with hidden options** (`formatNoteTitle`, `formatAnnotationNote`, `formatAnnotationHighlight`, `formatAnnotationUnderline`)
+    -The available wildcards are `%(content)` for the highlights text, `%(cite)` for the in-text citation of the zotero item, `%(page)` for the page of the annotation, `%(uri)` for the uri that open the pdf on the correct page, `%(label)` for the text label displayed in the title bar of the annotation pop-up commonly used for the user who added the annotation, and `%(color)`
+    -/
+    -`%(color_category)` for the annotation color as described above. The default for `formatAnnotationHighlight` is `<p>"%(content)" (%(cite))</p>`. WARNING: I removed the old settings. You will have to change the new settings if you want to customize the format of the note with extracted annotations.
+
+---
+
+extensions.zotfile.pdfExtraction.formatAnnotationNote;<div class="note" style="background-color: "#FFFFFF"><p class="text">%(content)</p><p class="source" style="text-align:right;">%(cite)</p></div>
+
+extensions.zotfile.pdfExtraction.formatAnnotationUnderline;<div class="underline" ><p class="text"><u>%(content)</u></p><p class="source" style="text-align:right;">%(cite)</p></div>
+
+extensions.zotfile.pdfExtraction.formatNoteTitle;<div class="head"><p class="title">%(title): %(date)</p><p class="date" style="display:none;">%(date)</p></div>
+
+
+## Custom Header for Color Categories
+
+### Add/Modify to colorCategories
+extensions.zotfile.pdfExtraction.colorCategories;
+{"Black": "#000000", "White": "#FFFFFF", "Dark Gray": "#666666", "Gray": "#808080", "KeyInsights": "#FF0000", "Orange": "#FF6600", "Yellow": "#FFFF00", "Green": "#00FF00", "Cyan": "#00FFFF", "Blue": "#0000FF", "Magenta": "#ff00ff", "Darkmagenta": "#800080"}
+
+default: {"Black": "#000000", "White": "#FFFFFF", "Gray": "#808080", "Red": "#FF0000", "Orange": "#FFA500", "Yellow": "#FFFF00", "Green": "#00FF00", "Cyan": "#00FFFF", "Blue": "#0000FF", "Magenta": "#FF00FF"}
+
+### Add %(color)/%(color_category) to AnnotationHilight (also other addition)
+extensions.zotfile.pdfExtraction.formatAnnotationHighlight;
+## %(color) <div class="highlight" style="background-color:%(color)"><p class="text"> %(content)</p><p class="source" style="text-align:right;">%(cite)</p></div>
+
+
+### Then replace with category names
+[{"regex":"\#\FF0000\b","replacement":"\[\[\bKeyInsights\b\]\]"}] 

@@ -39,7 +39,7 @@ function doExport() {
 }
 
 /* my adaptation for markdown output */
-/* output format: [Title (Author et al. year3)](zotero-select-link) */
+/* output format: [Title (Author et al. year)](zotero-select-link) */
 	
 function doExport() {
 	var item;

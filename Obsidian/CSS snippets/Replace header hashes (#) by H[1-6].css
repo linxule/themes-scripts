@@ -16,7 +16,7 @@ div:not(.CodeMirror-activeline)> pre .cm-formatting.cm-formatting-header.cm-form
 div:not(.CodeMirror-activeline)> pre .cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,
 div:not(.CodeMirror-activeline)> pre .cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,
 div:not(.CodeMirror-activeline)> pre .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6
-{font-size:0px;}
+{font-size:0px !important;}
 
 /*-- display H1-h6 instead when inactive--*/
 div:not(.CodeMirror-activeline)>pre.HyperMD-header-1:before {

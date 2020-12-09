@@ -1,17 +1,11 @@
-/* Header folder icon */
-.CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded {
-  padding-left: -10px;
-}
-
-.CodeMirror-sizer{
-  margin-left: 35px !important;
-}
-
-/*-- reduce left padding --*/
-.CodeMirror {
-  height: 100%;
-  direction: ltr;
-  padding: 0 5px;
+/* Custom font-size for headers */
+:root {
+  --h1: 1em;
+  --h2: 1em;
+  --h3: 1em;
+  --h4: 1em;
+  --h5: 1em;
+  --h6: 1em;
 }
 
 /*-- hide # markup--*/
@@ -106,29 +100,4 @@
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6{
   font-size:16px;
   display:inline;
-}
-
-/* Change header size in Edit mode */
-.cm-header-1 {
-  font-size: 27px;
-}
-  
-.cm-header-2 {
-  font-size: 22px;
-}
-  
-.cm-header-3 {
-  font-size: 21px;
-}
-  
-.cm-header-4 {
-  font-size: 19px;
-}
-  
-.cm-header-5 {
-  font-size: 16px;
-}
-  
-.cm-header-6 {
-  font-size: 13px;
 }

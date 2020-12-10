@@ -1,0 +1,6 @@
+/* Hide Markdown Syntax */    
+/* Hide Bold, Italic, Strikethrough Syntax */    
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-strong,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-em,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-strikethrough,
+{ display: none; }

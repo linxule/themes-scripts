@@ -1,0 +1,13 @@
+/* show line number. to counter WYSIWYG*/
+.cm-s-obsidian .CodeMirror-linenumber {
+    opacity : 1 !important;
+}
+
+/*-- show # markup--*/
+.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1,
+.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,
+.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3,
+.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,
+.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,
+.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6
+{font-size:0px;}

@@ -1,21 +1,20 @@
-/* Bullet Point Relationship Lines by Bernando and cannibalox */
+/* Bullet Point Relationship Lines in Editor */
 
-ul ul { position: relative; }
-ul ul::before {
-content:'';
-border-left:  1px solid var(--background-modifier-border);
-position: absolute;
-}
-ul ul::before { left: -0.8em; top: 0; bottom: 0; }
+.cm-hmd-list-indent .cm-tab, 
+ul ul,
+ol ul,
+ul ol,
+ol ol  
+{ position: inherit; }
 
-
-/* rule line when there are checkboxes*/
-ul .task-list-item ul::before {left: 0.15em !important}
-
-/* ul line in source mode */
-.cm-hmd-list-indent .cm-tab::before{
+.cm-hmd-list-indent .cm-tab::before, 
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before 
+{
 content: ' ';
-border-left:  1px solid var(--background-modifier-border);
+border-left:  0.1em solid var(--background-modifier-border);
 position: absolute;
 height: 100%;
 }

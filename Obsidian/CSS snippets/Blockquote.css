@@ -1,0 +1,18 @@
+/* Blockquote: in edit mode with left border rendered instead of > */
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting.cm-formatting-quote,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hmd-indent-in-quote {
+  display: inline !important;
+  color: transparent !important;
+}
+
+div:not(.CodeMirror-activeline)>.HyperMD-quote {
+   /* background-color:rgb(238, 234, 234); */
+   border-left: 3px solid var(--text-selection);
+   border-color: red !important; 
+   border-radius: 0 8px 8px 0;
+   /* font-size: 17px; */
+   /* line-height: 1.5em; */
+   margin-left: 5px;
+   /* padding: 12px 10px 15px 8.5px; */
+   display: inline-block;
+}

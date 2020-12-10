@@ -1,0 +1,22 @@
+/* connecting lines outliner */
+.outline .collapsible-item-children {
+    margin-left: 20px;
+    border-left: 1px solid var(--text-muted);
+    border-radius: 4px;
+    transition:all 0.5s ease-in-out;
+}
+
+.outline .collapsible-item-children:hover {
+    border-left-color: var(--text-normal);
+}
+
+/* change font color outline */
+div.collapsible-item-inner {
+  color: var(--base3);
+}
+
+/* indent wrapped titles outliner*/
+  .outline .collapsible-item-inner {
+    margin-left: 10px;
+    text-indent: -10px;
+}

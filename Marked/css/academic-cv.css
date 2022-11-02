@@ -3,18 +3,16 @@ This document has been created with Marked.app <https://marked2app.com>, Copyrig
 Content is property of the document author
 Please leave this notice in place, along with any additional credits below.
 ---------------------------------------------------------------
-Title:  Academic (adjusted for CV)
+Title:  Academic CV
 Author:  Xule Lin
-Description:
-paper size: US letter,
-12pt/16px, Times New Roman, Double-spaced, text-align: left
-headers adjusted for 1. section header, name, personal information
-list style: first level - none, second level - circle
+Description: Academic style for CV
+paper size: A4
+Notes: 12pt/16px, Times New Roman, Double-spaced, text-align left, headers adjusted for 1. section header, name, personal information, list style first level - none, second level - circle
 */
 
 body {
 	-webkit-font-smoothing: antialiased;
-	font: normal 1em/2em "Times New Roman", courier, monospace;
+	font: normal 1em/2em "SF Pro", courier, monospace;
 	width: auto; }
 
 html > body {
@@ -33,19 +31,24 @@ html > body {
 	padding-left: 1em;
 	line-height: 1em;
 	margin-bottom: 2em}
+
+/* List style*/
+/*Change the list to remove list style and margin for level 1 and 2*/
 #wrapper ul, #wrapper ol {
 	list-style-position: inside;
 	font-weight: bold;
+	line-height: 120%;
 	padding: 0;
-	margin-top: 1em;
-	margin-bottom: 1em}
+	margin-top: 0em;
+	margin-bottom: 1.5em}
 	#wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
 		font-weight: normal;
 		padding-left: 0;
-		margin-left: 1em;
+		margin-left: 0em;
 	  margin-top: 0em; }
 #wrapper ul {
-	list-style-type: none; }
+	list-style-type: none; 
+	margin-bottom: 1.5em}
 	#wrapper ul > li:before {
 		content: ' '; }
 	#wrapper ul > li:after {
@@ -55,7 +58,12 @@ html > body {
 	#wrapper ul li p {
 		display: inline; }
 	#wrapper ul ul{
-		list-style-type: circle;}
+		list-style-type: none;
+		margin-top:0.2em;
+		margin-bottom: 0.5em}
+	#wrapper ul ul ul{
+		padding-left: 0.3in;
+		}	
 	#wrapper ul ol {
 		margin-bottom: 0; }
 #wrapper ol {
@@ -83,6 +91,7 @@ h1 {
 /*h2 is for name on top*/
 h2 {
 	font-size: 18pt;
+	line-height: 1.4em;
 	text-align: center;
 	font-weight: bold;
 	margin-top: 1em;
@@ -93,13 +102,13 @@ h2 {
 
 /*h3 is for personal information under name section*/
 h3 {
-	font-size: 12pt;
-	line-height: 0.5em;
+	font-size: 11pt;
+	line-height: 1.2em;
 	width: 1;
 	text-align: center;
 	font-weight: normal;
 	margin-top: 0em;
-	margin-bottom: 0.5em;
+	margin-bottom: 0em;
 	padding-left: 0.5em
 }
 
@@ -282,11 +291,12 @@ table tr:nth-child(even), table td:nth-child(even) {
 
 
 @page {
-		size: letter;
-		margin: auto;
+		size: A4;
+		margin: 100px;
 }
 
 @media print {
+	margin: 20px;
 	body {
 		overflow: auto; }
 

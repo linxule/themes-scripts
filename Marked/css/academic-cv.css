@@ -37,10 +37,10 @@ html > body {
 #wrapper ul, #wrapper ol {
 	list-style-position: inside;
 	font-weight: bold;
-	line-height: 120%;
+	line-height: 1.1em;
 	padding: 0;
 	margin-top: 0em;
-	margin-bottom: 1.5em}
+	margin-bottom: 1em}
 	#wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
 		font-weight: normal;
 		padding-left: 0;
@@ -48,7 +48,7 @@ html > body {
 	  margin-top: 0em; }
 #wrapper ul {
 	list-style-type: none; 
-	margin-bottom: 1.5em}
+	margin-bottom: 1em}
 	#wrapper ul > li:before {
 		content: ' '; }
 	#wrapper ul > li:after {
@@ -82,8 +82,8 @@ h1 {
 	text-align: left;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-top: 1.5em;
-	margin-bottom: 1em;
+	margin-top: 1.2em;
+	margin-bottom: 0.5em;
 	border-bottom-style: solid;
 	border-bottom-width: thin;
 }
@@ -91,7 +91,7 @@ h1 {
 /*h2 is for name on top*/
 h2 {
 	font-size: 18pt;
-	line-height: 1.4em;
+	line-height: 1.2em;
 	text-align: center;
 	font-weight: bold;
 	margin-top: 1em;
@@ -292,11 +292,12 @@ table tr:nth-child(even), table td:nth-child(even) {
 
 @page {
 		size: A4;
-		margin: 100px;
+		margin: 0mm;
 }
 
 @media print {
-	margin: 20px;
+	size: A4;
+	margin: 0mm;
 	body {
 		overflow: auto; }
 
